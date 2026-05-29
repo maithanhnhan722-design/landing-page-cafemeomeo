@@ -5,7 +5,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* 1. Đặt font Comfortaa làm mặc định cho toàn bộ chữ nhỏ, menu, nút bấm */
+    font-family: 'Comfortaa', cursive;
 }
 
 html {
@@ -16,6 +17,12 @@ body {
     background-color: #FFF0F2; /* Màu nền hồng phấn cực kỳ dịu mắt */
     color: #4A3538;               /* Màu chữ nâu đậm cho hợp tông hồng */
     line-height: 1.6;
+}
+
+/* 2. Đặt font Fredoka tròn béo riêng cho toàn bộ các tiêu đề lớn để làm điểm nhấn */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka', sans-serif;
+    letter-spacing: 0.5px; /* Giúp các nét chữ béo đứng cạnh nhau thoáng, dễ nhìn hơn */
 }
 
 .container {
