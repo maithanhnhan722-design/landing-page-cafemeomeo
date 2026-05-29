@@ -1,0 +1,287 @@
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFF0F2; /* Màu nền hồng phấn cực kỳ dịu mắt */
+    color: #4A3538;               /* Màu chữ nâu đậm cho hợp tông hồng */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Các nút bấm chung tông hồng/nâu */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 25px; /* Bo tròn nhìn cho thơ mộng */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #FF8DA1; /* Nút màu hồng đậm nổi bật */
+    color: #fff;
+    border: 2px solid #FF8DA1;
+}
+
+.btn-primary:hover {
+    background-color: #E07387;
+    border-color: #E07387;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #FF8DA1;
+    border: 2px solid #FF8DA1;
+}
+
+.btn-secondary:hover {
+    background-color: #FF8DA1;
+    color: #fff;
+}
+
+/* ==========================================================================
+   1. HEADER (Thanh menu trên cùng màu trắng hồng)
+   ========================================================================== */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(255, 141, 161, 0.15);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo h2 {
+    color: #4A3538;
+    font-size: 24px;
+}
+
+.logo h2 span {
+    color: #FF8DA1;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu ul li {
+    margin: 0 15px;
+}
+
+.nav-menu ul li a {
+    font-weight: 500;
+    color: #6B5255;
+    transition: color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    color: #FF8DA1;
+}
+
+/* ==========================================================================
+   2. BANNER / HERO
+   ========================================================================== */
+.hero-banner {
+    background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1920');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    margin-top: 80px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(74, 53, 56, 0.4); /* Overlay màu nâu hồng nhẹ */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #f5e6e8;
+}
+
+/* ==========================================================================
+   3. PRODUCTS (Bố cục Grid không lo vỡ layout trên Desktop)
+   ========================================================================== */
+.products-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: #4A3538;
+    margin-bottom: 10px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 15px; /* Bo tròn card cho dễ thương */
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(255, 141, 161, 0.1);
+    transition: transform 0.3s;
+    border: 1px solid #FFE1E6;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-img img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #4A3538;
+}
+
+.product-desc {
+    color: #7A6366;
+    font-size: 14px;
+    margin-bottom: 20px;
+    height: 66px;
+    overflow: hidden;
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FF8DA1;
+}
+
+.btn-buy {
+    background-color: #FF8DA1;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #E07387;
+}
+
+/* ==========================================================================
+   4. FOOTER
+   ========================================================================== */
+.main-footer {
+    background-color: #4A3538; /* Nền footer màu nâu gỗ ấm áp hợp với màu hồng */
+    color: #E8D7D9;
+    padding: 60px 0 20px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-info h3, .footer-links h4, .footer-contact h4 {
+    color: #FFF;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a:hover {
+    color: #FF8DA1;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
